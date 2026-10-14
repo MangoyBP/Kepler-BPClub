@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f0e7">
+  <title>Kaffeezeit – meine kleine Kaffeeseite</title>
+  <style>
+   :root {
+      --primary: #005a9c;
+      --coffee: #593b2b;
+      --coffee-dark: #30231e;
+      --cream: #f6f0e7;
+      --paper: #fffdf9;
+      --muted: #74685f;
+      --line: #e8ded1;
+      --shadow: 0 18px 50px rgb(48 35 30 / 9%);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--coffee-dark);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    .seitenkopf,
+    main,
+    footer {
+      width: min(1080px, calc(100% - 3rem));
+      margin-inline: auto;
+    }
+
+    .seitenkopf {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding-block: 1.25rem;
+    }
+
+    .marke {
+      color: var(--coffee-dark);
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+    }
+
+    nav a {
+      color: var(--coffee-dark);
+      font-size: 0.95rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 0.25em;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: clamp(2rem, 6vw, 5rem);
+      margin-block: 2rem 4.5rem;
+      padding: clamp(2rem, 6vw, 5rem);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 1.5rem;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-text,
+    .hero-bild {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+
+    .kicker {
+      margin: 0 0 0.75rem;
+      color: var(--primary);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 11ch;
+      margin-bottom: 1rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.7rem, 6vw, 5rem);
+      font-weight: 500;
+      letter-spacing: -0.055em;
+      line-height: 1.04;
+    }
+
+    .hero-text > p:not(.kicker) {
+      max-width: 48ch;
+      margin-bottom: 1.5rem;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .sprunglink {
+      display: inline-block;
+      padding: 0.75rem 1.15rem;
+      border: 1px solid var(--coffee);
+      border-radius: 99px;
+      background: var(--coffee);
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .sprunglink:hover,
+    .sprunglink:focus-visible {
+      border-color: var(--primary);
+      background: var(--primary);
+    }
+
+    .hero-bild {
+      display: grid;
+      min-height: 290px;
+      place-items: center;
+      border-radius: 1.1rem;
+      background: #ead8c1;
+    }
+
+    .hero-bild img {
+      display: block;
+      width: min(100%, 390px);
+      height: auto;
+    }
+
+    .abschnitt {
+      margin-block: 4rem;
+      scroll-margin-top: 1.5rem;
+    }
+
+    .abschnitt-kopf {
+      max-width: 650px;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      margin-bottom: 0.5rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 500;
+      letter-spacing: -0.035em;
+      line-height: 1.15;
+    }
+
+    .abschnitt-kopf p,
+    .karte p {
+      color: var(--muted);
+    }
+
+    .kartenreihe {
+      display: flex;
+      align-items: stretch;
+      gap: 1rem;
+    }
+
+    .karte {
+      flex: 1 1 0;
+      min-width: 0;
+      margin: 0;
+      padding: 1.5rem;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      background: var(--paper);
+      box-shadow: 0 8px 24px rgb(48 35 30 / 5%);
+    }
+
+    .karten-symbol {
+      display: grid;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin-bottom: 1rem;
+      place-items: center;
+      border-radius: 50%;
+      background: #efe3d3;
+      font-size: 1.3rem;
+    }
+
+    .karte h3 {
+      margin: 0 0 0.5rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+    }
+
+    .karte p {
+      margin-bottom: 0;
+    }
+
+    .ritual {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: clamp(1.5rem, 4vw, 3rem);
+      border-radius: 1.25rem;
+      background: #e8ded1;
+    }
+
+    .ritual > div {
+      flex: 1 1 0;
+    }
+
+    .ritual ul {
+      display: grid;
+      flex: 1 1 0;
+      gap: 0.75rem;
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    .ritual li::marker {
+      color: var(--primary);
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-block: 1.5rem 2.5rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      .seitenkopf {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      nav {
+        gap: 0.5rem 1rem;
+      }
+
+      .hero {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 1rem;
+        margin-bottom: 3.5rem;
+        padding: 1.5rem;
+      }
+
+      .hero-bild {
+        min-height: 220px;
+      }
+
+      .kartenreihe,
+      .ritual {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .abschnitt {
+        margin-block: 3rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="seitenkopf">
+    <a class="marke" href="#start" aria-label="Kaffeezeit – zum Anfang">Kaffeezeit.</a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#lieblinge">Meine Lieblinge</a>
+      <a href="#ritual">Mein Kaffeeritual</a>
+    </nav>
+  </header>
+
+  <main id="start">
+    <section class="hero" aria-labelledby="titel">
+      <div class="hero-text">
+        <p class="kicker">Eine kleine Pause für zwischendurch</p>
+        <h1 id="titel">Kaffee macht den Tag gemütlicher.</h1>
+        <p>
+          Willkommen auf meiner Seite rund um Kaffee! Hier geht es um meine
+          Lieblingsgetränke, gute Düfte und die kleinen Pausen, die den Alltag
+          ein bisschen schöner machen.
+        </p>
+        <a class="sprunglink" href="#lieblinge">Meine Favoriten entdecken</a>
+      </div>
+      <div class="hero-bild">
+        <img
+          alt="Illustration einer warmen Tasse Kaffee mit aufsteigendem Dampf"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 340'%3E%3Crect width='420' height='340' rx='28' fill='%23ead8c1'/%3E%3Ccircle cx='210' cy='174' r='126' fill='%23f6eee3'/%3E%3Cpath d='M120 137h157v87a57 57 0 0 1-57 57h-43a57 57 0 0 1-57-57z' fill='%23fffdf9' stroke='%23593b2b' stroke-width='9'/%3E%3Cpath d='M277 157h23a34 34 0 0 1 0 68h-25' fill='none' stroke='%23593b2b' stroke-width='12' stroke-linecap='round'/%3E%3Cellipse cx='199' cy='139' rx='78' ry='17' fill='%23593b2b'/%3E%3Cpath d='M174 105c-18-20 17-25 0-48m42 48c-18-20 17-25 0-48m42 48c-18-20 17-25 0-48' fill='none' stroke='%23fffdf9' stroke-width='8' stroke-linecap='round'/%3E%3Cpath d='M113 284h197' stroke='%23593b2b' stroke-width='9' stroke-linecap='round'/%3E%3C/svg%3E">
+      </div>
+    </section>
+
+    <section class="abschnitt" id="lieblinge" aria-labelledby="lieblinge-titel">
+      <div class="abschnitt-kopf">
+        <p class="kicker">Drei kleine Favoriten</p>
+        <h2 id="lieblinge-titel">So trinke ich meinen Kaffee</h2>
+        <p>
+          Jeder Kaffee passt zu einer anderen Stimmung. Diese drei Varianten
+          mag ich besonders, weil sie ganz unterschiedlich schmecken und sich
+          einfach zubereiten lassen.
+        </p>
+      </div>
+      <div class="kartenreihe">
+        <article class="karte">
+          <span class="karten-symbol" aria-hidden="true">☕</span>
+          <h3>Cappuccino</h3>
+          <p>Espresso und cremiger Milchschaum – für mich ein milder, gemütlicher Start in den Tag.</p>
+        </article>
+        <article class="karte">
+          <span class="karten-symbol" aria-hidden="true">🌿</span>
+          <h3>Filterkaffee</h3>
+          <p>Der Duft beim Aufbrühen ist wunderbar. Eine große Tasse davon passt gut zu einer ruhigen Pause.</p>
+        </article>
+        <article class="karte">
+          <span class="karten-symbol" aria-hidden="true">🧊</span>
+          <h3>Eiskaffee</h3>
+          <p>An warmen Tagen schmeckt Kaffee mit Eiswürfeln besonders erfrischend – am liebsten ganz entspannt draußen.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="abschnitt" id="ritual" aria-labelledby="ritual-titel">
+      <div class="ritual">
+        <div>
+          <p class="kicker">Meine kleine Auszeit</p>
+          <h2 id="ritual-titel">Ein gutes Kaffeeritual</h2>
+          <p>
+            Für mich gehört zu einer Kaffeepause mehr als nur das Getränk.
+            Ich nehme mir kurz Zeit, lasse den Alltag warten und genieße den
+            Moment. So wird sogar ein gewöhnlicher Nachmittag ein bisschen
+            besonderer.
+          </p>
+        </div>
+        <ul>
+          <li>Lieblingstasse aussuchen</li>
+          <li>Kaffee frisch zubereiten</li>
+          <li>Etwas Leckeres dazu nehmen</li>
+          <li>In Ruhe genießen</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Mit Liebe zum Kaffee gemacht · Meine kleine Kaffeeseite</p>
+  </footer>
+</body>
+</html>
