@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="titel">
+  <title id="titel">Eine dampfende Tasse Kaffee auf einem Tisch</title>
+  <rect width="640" height="360" rx="28" fill="#ead8c1"/>
+  <circle cx="320" cy="170" r="132" fill="#f6eee3"/>
+  <path d="M208 139h197v92a67 67 0 0 1-67 67h-63a67 67 0 0 1-67-67z" fill="#fffdf9" stroke="#593b2b" stroke-width="10"/>
+  <path d="M405 162h29a39 39 0 0 1 0 78h-30" fill="none" stroke="#593b2b" stroke-width="13" stroke-linecap="round"/>
+  <ellipse cx="306" cy="142" rx="98" ry="21" fill="#593b2b"/>
+  <path d="M282 105c-20-24 20-31 0-59m49 59c-20-24 20-31 0-59m48 59c-20-24 20-31 0-59" fill="none" stroke="#fffdf9" stroke-width="9" stroke-linecap="round"/>
+  <path d="M171 311h306" stroke="#593b2b" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="466" cy="95" r="7" fill="#005a9c"/>
+  <circle cx="493" cy="119" r="5" fill="#005a9c"/>
+  <circle cx="155" cy="119" r="6" fill="#005a9c"/>
+</svg>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f0e7">
+  <title>Mein Kaffeeritual für eine gute Pause</title>
+  <style>
+    :root {
+      --coffee: #593b2b;
+      --coffee-dark: #30231e;
+      --cream: #f6f0e7;
+      --paper: #fffdf9;
+      --muted: #74685f;
+      --line: #e8ded1;
+      --primary: #005a9c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 2rem 1.25rem;
+      background:
+        radial-gradient(ellipse at 90% 5%, rgb(232 222 209 / 80%), transparent 27rem),
+        var(--cream);
+      color: var(--coffee-dark);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.75;
+    }
+
+    main {
+      width: min(760px, 100%);
+      margin-inline: auto;
+      padding: clamp(1.5rem, 5vw, 3.5rem);
+      border: 1px solid var(--line);
+      border-radius: 1.25rem;
+      background: var(--paper);
+      box-shadow: 0 18px 50px rgb(48 35 30 / 9%);
+    }
+
+    h1,
+    h2 {
+      color: var(--coffee-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(2.3rem, 6vw, 3.6rem);
+      letter-spacing: -0.05em;
+      line-height: 1.05;
+    }
+
+    h2 {
+      margin: 2rem 0 0.6rem;
+      font-size: 1.8rem;
+    }
+
+    p,
+    ol,
+    ul,
+    blockquote {
+      margin-top: 0;
+    }
+
+    p,
+    li {
+      color: var(--muted);
+    }
+
+    strong {
+      color: var(--coffee-dark);
+    }
+
+    em {
+      color: var(--coffee);
+    }
+
+    a {
+      color: var(--primary);
+      text-underline-offset: 0.2em;
+    }
+
+    img {
+      display: block;
+      width: min(100%, 420px);
+      height: auto;
+      margin: 1.5rem auto;
+      border-radius: 1rem;
+    }
+
+    code {
+      padding: 0.18rem 0.4rem;
+      border-radius: 0.35rem;
+      background: #efe3d3;
+      color: var(--coffee-dark);
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.9em;
+      overflow-wrap: anywhere;
+    }
+
+    blockquote {
+      margin: 1.5rem 0 0;
+      padding: 0.8rem 1.1rem;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 0.6rem 0.6rem 0;
+      background: #f6f0e7;
+      color: var(--coffee);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Mein Kaffeeritual für eine gute Pause</h1>
+
+    <p>
+      Eine kleine Pause kann einen langen Tag gleich viel angenehmer machen.
+      Mein Kaffeeritual ist einfach: Ich suche mir eine Lieblingstasse aus,
+      bereite frischen Kaffee zu und nehme mir ein paar Minuten Zeit. Am
+      liebsten trinke ich einen <strong>Cappuccino</strong> am Morgen oder
+      einen <em>Filterkaffee</em> am Nachmittag. Der Duft von frisch gebrühtem
+      Kaffee macht die Küche gemütlich, und die kurze Pause hilft mir, danach
+      wieder konzentriert weiterzuarbeiten.
+    </p>
+
+    <h2>So bereite ich meine Pause vor</h2>
+    <ol>
+      <li>Ich wähle meine Lieblingstasse aus.</li>
+      <li>Ich mahle die Bohnen frisch und brühe den Kaffee auf.</li>
+      <li>Ich mache es mir bequem und genieße meine Pause.</li>
+    </ol>
+
+    <p>
+      Für einen Cappuccino schäume ich etwas Milch auf und gebe sie vorsichtig
+      zum Espresso. Dazu passt ein Keks oder ein Stück Obst. Wenn es draußen
+      warm ist, lasse ich den Kaffee abkühlen und serviere ihn mit Eiswürfeln.
+      So wird aus dem warmen Getränk ein erfrischender Eiskaffee.
+    </p>
+
+    <h2>Was zu meiner Pause dazugehört</h2>
+    <ul>
+      <li>eine saubere Lieblingstasse</li>
+      <li>frisch gemahlene Kaffeebohnen</li>
+      <li>ein ruhiger Platz ohne Ablenkung</li>
+      <li>ein kleiner Snack für den Genuss</li>
+    </ul>
+
+    <p>
+      <img src="kaffee.svg" alt="Illustration einer dampfenden Kaffeetasse">
+    </p>
+
+    <p>
+      Mehr Ideen für die Zubereitung gibt es bei
+      <a href="https://www.kaffeezentrale.de/">Kaffeezentrale</a>.
+    </p>
+
+    <p>
+      Mein kleiner Merksatz für die Zubereitung lautet:
+      <code>frisch mahlen, langsam aufbrühen, in Ruhe genießen</code>.
+    </p>
+
+    <blockquote>
+      Eine gute Pause muss nicht lang sein – wichtig ist, dass man sie bewusst
+      genießt.
+    </blockquote>
+  </main>
+</body>
+</html>
